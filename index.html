@@ -10,6 +10,10 @@
 <meta property="og:description" content="ROS2 software in C++ and Python for perception, sensor fusion, calibration and manipulation on real hardware." />
 <meta property="og:image" content="https://sourav0607.github.io/photo.jpg" />
 <meta property="og:url" content="https://sourav0607.github.io/" />
+<meta name="theme-color" content="#0d1117" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=yes" />
+<link rel="apple-touch-icon" href="photo.jpg" />
 <title>Sourav Hawaldar | Robotics Software Engineer</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230d1117'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='28' font-weight='700' fill='%2358d6c3'>SH</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +31,7 @@
   --accent-ink:#ffffff; --shadow:0 10px 30px rgba(20,30,50,.08);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;scroll-behavior:smooth;scroll-padding-top:70px}
 body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
@@ -46,7 +50,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
 .icon-btn{background:none;border:1px solid var(--border);color:var(--text);cursor:pointer;border-radius:8px;width:36px;height:36px;display:grid;place-items:center;font-size:1rem}
 #mob-menu-btn{display:none}
 #mob-drawer{display:none;position:fixed;top:60px;left:0;right:0;z-index:199;background:var(--bg);border-bottom:1px solid var(--border);padding:.5rem 20px 1rem;flex-direction:column}
-#mob-drawer a{padding:.7rem 0;color:var(--muted);border-bottom:1px solid var(--border)}
+#mob-drawer a{padding:.9rem 0;font-size:1rem;color:var(--muted);border-bottom:1px solid var(--border)}
 #mob-drawer a:last-child{border-bottom:none;color:var(--accent)}
 
 /* HERO */
@@ -65,7 +69,7 @@ h1 em{color:var(--accent);font-style:italic}
 .badge.hot{border-color:var(--accent);color:var(--accent)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.6rem}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.4rem;border-radius:10px;font-weight:500;font-size:.95rem;transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-2px)}
+@media (hover:hover){.btn:hover{transform:translateY(-2px)}}
 .btn-primary{background:var(--accent);color:var(--accent-ink)}
 .btn-outline{border:1px solid var(--border);color:var(--text)}
 .btn-outline:hover{border-color:var(--accent)}
@@ -116,7 +120,7 @@ h1 em{color:var(--accent);font-style:italic}
 /* PROJECTS */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
 .project-card{background:var(--dark3);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
-.project-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+@media (hover:hover){.project-card:hover{transform:translateY(-4px);border-color:var(--accent)}}
 .project-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1.1fr 1fr}
 .p-img{aspect-ratio:2/1;background:var(--bg);overflow:hidden;border-bottom:1px solid var(--border)}
 .featured .p-img{aspect-ratio:auto;min-height:150px;border-bottom:none;border-right:1px solid var(--border)}
@@ -187,6 +191,31 @@ footer{text-align:center;padding:2rem 20px;color:var(--muted);font-size:.82rem;b
   .timeline{padding-left:20px}
   .tl-item::before{left:-21px}
   .timeline::before{left:2px}
+  #hero{min-height:auto;padding:96px 0 64px}
+  .hero-inner{gap:1.8rem;text-align:left}
+  .hero-role .rot{display:block;min-height:1.6em;border-right:none;padding-right:0;white-space:normal}
+  .badge-row{gap:.4rem}
+  .hero-cta .btn{flex:1 1 140px;justify-content:center;padding:.85rem 1rem}
+  .social-row{gap:.4rem}
+  .social-row a{padding:.6rem .8rem;border:1px solid var(--border);border-radius:10px}
+  .about-stats{gap:.7rem}
+  .stat-card{padding:1rem}
+  .stat-card .num{font-size:1.9rem}
+  .tl-item{padding:1.1rem 1rem}
+  .tl-head,.tl-role{flex-direction:column;gap:.15rem}
+  .tl-bullets{margin-left:1rem;font-size:.9rem}
+  .project-body{padding:1.1rem}
+  .p-links a{display:inline-block;padding:.45rem 0}
+  .edu-card{padding:1.1rem 1rem;gap:.6rem}
+  .contact-links{flex-direction:column;align-items:stretch}
+  .contact-btn{justify-content:center;padding:.9rem 1rem;word-break:normal;overflow-wrap:anywhere}
+}
+@media (max-width:380px){
+  h1{font-size:2.3rem}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .stat-card .num{font-size:1.6rem}
+  .stat-card .label{font-size:.75rem}
+  .ros-chip{font-size:.68rem;bottom:0}
 }
 </style>
 <script>
@@ -556,6 +585,7 @@ footer{text-align:center;padding:2rem 20px;color:var(--muted);font-size:.82rem;b
   });
   mobDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMob));
   window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMob(); });
+  document.addEventListener('click', e => { if (mobDrawer.style.display === 'flex' && !mobDrawer.contains(e.target) && !mobBtn.contains(e.target)) closeMob(); });
 
   // Scroll reveal
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.08 });
