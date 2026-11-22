@@ -1,7 +1,6 @@
 // All portfolio content lives here so it can be updated without touching layout code.
 
 export const gh = (repo: string) => `https://github.com/Sourav0607/${repo}`;
-export const ogImage = (repo: string) => `https://opengraph.githubassets.com/1/Sourav0607/${repo}`;
 
 export const contact = {
   email: 'sourav.hawaldar@gmail.com',

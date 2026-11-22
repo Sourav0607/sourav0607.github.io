@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { marqueeRepos, marqueeHighlights, ogImage, gh } from '../data';
+import { marqueeRepos, marqueeHighlights, gh } from '../data';
+import RepoTile from '../components/RepoTile';
 
 const tile = 'h-[180px] w-[280px] sm:h-[270px] sm:w-[420px] shrink-0 rounded-2xl overflow-hidden';
 
@@ -35,8 +36,8 @@ export default function MarqueeSection() {
     <section ref={ref} className="flex flex-col gap-3 bg-[#0C0C0C] pb-10 pt-24 sm:pt-32 md:pt-40" style={{ overflowX: 'clip' }} aria-label="Project and highlight gallery">
       <div className="flex gap-3" style={{ transform: `translateX(${offset - 200}px)`, willChange: 'transform', marginLeft: '-1200px' }}>
         {row1.map((repo, i) => (
-          <a key={i} href={gh(repo)} target="_blank" rel="noopener noreferrer" className={`${tile} bg-white`} tabIndex={i < marqueeRepos.length ? 0 : -1}>
-            <img src={ogImage(repo)} alt={`${repo} repository on GitHub`} loading="lazy" className="h-full w-full object-cover" />
+          <a key={i} href={gh(repo)} target="_blank" rel="noopener noreferrer" className={`${tile} block border border-[#D7E2EA]/15`} tabIndex={i < marqueeRepos.length ? 0 : -1}>
+            <RepoTile repo={repo} />
           </a>
         ))}
       </div>

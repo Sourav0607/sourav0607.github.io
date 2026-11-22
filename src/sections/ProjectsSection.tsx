@@ -2,7 +2,8 @@ import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion
 import { useRef } from 'react';
 import FadeIn from '../components/FadeIn';
 import LiveProjectButton from '../components/LiveProjectButton';
-import { projects, ogImage, gh, openSource, type Project } from '../data';
+import { projects, gh, openSource, type Project } from '../data';
+import RepoTile from '../components/RepoTile';
 
 const radius = 'rounded-[28px] sm:rounded-[40px] md:rounded-[50px]';
 
@@ -34,9 +35,9 @@ function Card({ p, index, total, progress }: { p: Project; index: number; total:
         {/* Bottom row: 40% / 60% grid */}
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-[2fr_3fr] sm:gap-4">
           <div className="flex flex-col gap-3 sm:gap-4">
-            <div className={`${radius} overflow-hidden bg-white`} style={{ height: 'clamp(120px, min(16vw, 20vh), 230px)' }}>
+            <div className={`${radius} overflow-hidden border border-[#D7E2EA]/15`} style={{ height: 'clamp(120px, min(16vw, 20vh), 230px)' }}>
               {p.repo ? (
-                <img src={ogImage(p.repo)} alt={`${p.name} repository preview`} loading="lazy" className="h-full w-full object-cover" />
+                <RepoTile repo={p.repo} compact />
               ) : (
                 <div className="flex h-full w-full items-center justify-center text-6xl" style={{ background: 'linear-gradient(135deg, #7621B0, #18011F)' }} aria-hidden="true">{p.icon}</div>
               )}
